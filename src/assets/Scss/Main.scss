@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+html,
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.main-css-bg {
+    background-color: $background !important;
+}
+
+.header_sec {
+    background-color: $background;
+
+    .navbar-brand {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+
+        a {
+            color: $white !important;
+            font-size: 16px;
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+
+    .navbar-nav {
+        a {
+            color: $white !important;
+            font-size: 16px;
+        }
+    }
+}
+
+.button {
+    position: relative;
+    padding: 8px 20px;
+    font-family: inherit;
+    background-color: $background;
+    border: 2px solid;
+    font-size: 14px;
+    font-weight: 600;
+    color: $white;
+    cursor: pointer;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 0px !important;
+}
+
+.button:hover span {
+    background: $bg-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.button::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: -110%;
+    top: -0%;
+    background: $primary-color;
+    pointer-events: none;
+    margin: auto;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button:hover {
+
+    border-image: $bg-gradient;
+    border-image-slice: 1;
+    font-size: 14px;
+}
+
+.button:hover::before {
+    left: 110%;
+}
+
+.button:active {
+    scale: 0.95;
+}
+
+.skills_sec {
+    border-bottom: 1px solid $border-color;
+}
+
+.bottom_bg {
+    background: $light-bg !important;
+
+    .bottom_sec {
+        text-decoration: none;
+
+        color: $background;
+
+        &:hover {
+            color: $background;
+        }
+    }
+}
+
+.modal_profile_details {
+    .modal-content {
+        background: $background;
+        border: 1px solid $border-color;
+
+        .modal-header {
+            color: $white;
+
+            svg {
+                color: $white;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .modal-body {
+        h4 {
+            color: $white;
+        }
+
+        svg {
+            color: $primary-color;
+        }
+    }
+
+
+
+}
+
+.top_sec {
+    svg {
+        color: $primary-color;
+    }
+}
+
+.your_name {
+    color: $primary-color;
+}
+
+.location {
+
+    color: $primary-color;
+}
+
+.text_color {
+    color: $white;
+}
+
+.textarea_sec {
+    background: $background;
+    color: $white;
+
+    &:focus {
+        background: $background;
+        outline: none !important;
+        box-shadow: none !important;
+        color: $white;
+    }
+}
+
+.modal-footer {
+    border-top: 0px !important;
+}
+
+.heading {
+    font-size: 16px;
+}
+
+.color-blue {
+    color: #17a2b8;
+}
+
+.bg-grey {
+    background-color: #F8F9FA;
+}
+
+/* ========== Scrollbar ========== */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ============================== */
+.top-image {
+    height: 300px;
+    background-image: url("../Images/banner_res.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: top;
+    background-size: cover;
+
+    @media ($breckpoint_SM) {
+        height: 110px;
+    }
+
+}
+
+
+.img-column {
+    height: 75px;
+}
+
+.profile-image {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    top: -75px;
+    border: 4px solid white;
+    object-fit: cover;
+    border-radius: 50%;
+
+    @media ($breckpoint_SM) {
+        height: 100px;
+        width: 100px;
+
+    }
+}
+
+/* ========== Edit Button ========== */
+.edit {
+    margin: 10px;
+    padding: 5px;
+    color: $primary-color;
+    transition: 0.4s;
+    border: none;
+}
+
+.edit:hover {
+    color: $primary-color;
+    background-color: $white;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ========== Tag ========== */
+.tag {
+    padding: 2px 10px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.technology {
+    padding: 2px 10px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    font-size: 14px;
+}
+
+.dropdown-list {
+    min-height: 200px;
+    overflow-y: scroll;
+}
+
+.delete {
+    transition: 0.4s;
+}
+
+.delete:hover {
+    color: #DC3545;
+    background-color: #ffffff;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1) !important;
+}
+
+
+
+/* ========== PDF ========== */
+
+.font-bold {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.font-thin {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.firstname {
+    position: relative;
+    top: 20px;
+}
+
+.title {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.bg-1 {
+    background-color: $data-bg;
+}
+
+.bg-2 {
+    background-color: rgb(49, 49, 49);
+}
+
+.bg-3 {
+    background-color: rgb(77, 77, 77);
+}
+
+.pdf {
+    width: 210mm;
+    height: 100vh;
+}
+
+.pdf-profile-image {
+    height: 150px;
+    width: 150px;
+    border: 4px solid white;
+    object-fit: cover;
+    border-radius: 50%;
+}
