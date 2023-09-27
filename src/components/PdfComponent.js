@@ -127,7 +127,8 @@ function PdfComponent() {
 
   return (
     <Fragment>
-
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5499182087357803"
+        crossorigin="anonymous"></script>
       <div className="container d-flex justify-content-center p-4">
 
         <div className="row pdf bg-light" id="divToPrint" size="A4">

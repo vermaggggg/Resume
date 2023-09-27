@@ -9,6 +9,8 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5499182087357803"
+     crossorigin="anonymous"></script>
     <BrowserRouter>
       <Provider store={store}>
         <App />
