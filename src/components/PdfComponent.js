@@ -244,7 +244,7 @@ function PdfComponent() {
       </div>
       <div className="d-grid col-2 mx-auto m-4">
         <button className="nav-link align-middle bg-dark text-white p-2 rounded button" onClick={printDocument}><span>Download</span></button>
-        <button className="nav-link align-middle bg-dark text-white p-2 rounded mt-2" onClick={createAndDownloadPdf}>Download 2.0</button>
+        {/* <button className="nav-link align-middle bg-dark text-white p-2 rounded mt-2" onClick={createAndDownloadPdf}>Download 2.0</button> */}
       </div>
 
     </Fragment>
