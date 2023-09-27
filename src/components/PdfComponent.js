@@ -5,8 +5,6 @@ import { GiGraduateCap } from 'react-icons/gi'
 import { HiLocationMarker, HiOfficeBuilding, HiOutlineMail, HiPhone } from 'react-icons/hi'
 import jsPDF from 'jspdf';
 import html2canvas from "html2canvas";
-import axios from 'axios';
-import { saveAs } from 'file-saver';
 
 import { useSelector } from 'react-redux';
 
@@ -20,24 +18,6 @@ function PdfComponent() {
   const educationList = useSelector(state => state.educationList)
   const skills = useSelector(state => state.skills)
 
-  const createAndDownloadPdf = () => {
-    const data = {
-      profile: profile,
-      name: name,
-      file: file,
-      about: about,
-      experienceList: experienceList,
-      educationList: educationList,
-      skills: skills
-    }
-    axios.post('http://localhost:5000/create-pdf', data)
-      .then(() => axios.get('http://localhost:5000/fetch-pdf', { responseType: 'blob' }))
-      .then((res) => {
-        const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
-
-        saveAs(pdfBlob, 'Resume.pdf');
-      })
-  }
 
   const printDocument = () => {
     const input = document.getElementById('divToPrint');
@@ -244,7 +224,6 @@ function PdfComponent() {
       </div>
       <div className="d-grid col-2 mx-auto m-4">
         <button className="nav-link align-middle bg-dark text-white p-2 rounded button" onClick={printDocument}><span>Download</span></button>
-        {/* <button className="nav-link align-middle bg-dark text-white p-2 rounded mt-2" onClick={createAndDownloadPdf}>Download 2.0</button> */}
       </div>
 
     </Fragment>
