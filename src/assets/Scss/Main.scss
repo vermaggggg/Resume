@@ -418,6 +418,7 @@ body {
             display: flex;
 
             @media ($breckpoint_LG) {
+                height: auto;
                 width: 100%;
             }
 
