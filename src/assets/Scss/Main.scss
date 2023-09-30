@@ -54,7 +54,7 @@ body {
     text-transform: uppercase;
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    border-radius: 0px !important;
+    border-radius: 24px !important;
     width: fit-content;
     z-index: 1;
 }
@@ -82,9 +82,9 @@ body {
 }
 
 .button:hover {
-
+    transform: scale(1.1);
     border-image: $bg-gradient;
-    border-image-slice: 1;
+   
     font-size: 14px;
 }
 
@@ -139,6 +139,7 @@ body {
 
     .modal-body {
         color: $txt-theme;
+
         h4 {
             color: $white;
         }
@@ -541,20 +542,21 @@ body {
                         }
 
                         h4 {
-                            font-size: 18px;
+                            font-size: 20px;
                         }
                     }
                 }
 
                 .education {
-                    .edu_inner {
+                    .edu_inner  {
                         p {
                             font-size: 14px;
                         }
 
-                        h4 {
-                            font-size: 18px;
-                        }
+                      
+                    }
+                    h4 {
+                        font-size: 20px !important;
                     }
                 }
             }
