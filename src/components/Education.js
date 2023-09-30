@@ -115,7 +115,7 @@ function Education() {
 
   return (
     <Row className="justify-content-center mt-2">
-      <Col md={8} sm={12} className="d-flex justify-content-between align-items-center bg-light rounded">
+      <Col md={8} sm={12} className="d-flex justify-content-between align-items-center bg-light rounded about_sec">
         <h5 className="m-0 heading">Education</h5>
         <MdAddCircleOutline size={30} className="rounded edit" onClick={handleShow} />
       </Col>
@@ -129,8 +129,8 @@ function Education() {
                   <GiGraduateCap size={50} className="rounded color-blue bg-grey p-1 shadow-sm" />
                   <div className="px-3">
                     <h5 className="m-0 text_color">{item.institute}</h5>
-                    <p className="text-muted m-0 text_color">{item.degree} • {item.fieldOfStudy}</p>
-                    <p className="text-muted text_color">{item.startYear} - {item.endYear} • Grade: {item.grade}</p>
+                    <p className="m-0 text_color">{item.degree} • {item.fieldOfStudy}</p>
+                    <p className="text_color">{item.startYear} - {item.endYear} • Grade: {item.grade}</p>
                   </div>
 
                 </Col>

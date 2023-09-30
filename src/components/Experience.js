@@ -120,7 +120,7 @@ function Experience() {
 
   return (
     <Row className="justify-content-center mt-2">
-      <Col md={8} sm={12} className="d-flex justify-content-between align-items-center bg-light rounded">
+      <Col md={8} sm={12} className="d-flex justify-content-between align-items-center bg-light rounded about_sec">
         <h5 className="m-0 heading">Experience</h5>
         <MdAddCircleOutline size={30} className="rounded edit" onClick={handleShow} />
       </Col>
@@ -133,8 +133,8 @@ function Experience() {
                     <HiOfficeBuilding size={50} className="rounded color-blue bg-grey shadow-sm p-1" />
                     <div className="px-3">
                       <h5 className="m-0 text_color">{item.title}</h5>
-                      <p className="text-muted m-0 text_color">{item.company} • {item.startMonth} {item.startYear} {`${item.isWorking ? " - Present" : " - "+item.endMonth+" "+item.endYear }`}</p>
-                      <p className="text-muted m-0 text_color">{item.location}</p>
+                      <p className="m-0 text_color">{item.company} • {item.startMonth} {item.startYear} {`${item.isWorking ? " - Present" : " - "+item.endMonth+" "+item.endYear }`}</p>
+                      <p className="m-0 text_color">{item.location}</p>
                       <p className='text_color'>{item.description}</p>
                     </div>
 

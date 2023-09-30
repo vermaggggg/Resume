@@ -1,0 +1,28 @@
+// for default theme dark
+:root {
+   
+    --primary-color:#57a9e8;
+  --banner-bg:url(../Images/banner_res.png);
+ --bg-gradient: #fff;
+ --background:#282e3e;
+ --header-bg:linear-gradient(135deg, #282e3e 80%, rgb(33 75 127) 0%);
+ --bottom-bg:#739dc8;
+ --txt-theme:#fff;
+ --button-bg:linear-gradient(0deg,rgb(33 75 127) 100%, #282e3e 0%);
+ --secondary-color:#57a9e8;
+
+}
+
+body[data-theme='light'] {
+   
+    --primary-color: #27b8c3e6;
+    --banner-bg:url(../Images/light_banner_bg.png);
+    --bg-gradient: linear-gradient(135deg,rgb(54 178 193) 0%, #8ad9e652 80%);
+    --background:#c7c6ea52;
+    --header-bg:linear-gradient(135deg,rgb(70 192 201) 80%, #8ad9e6 0%);
+    --bottom-bg:#bba7fc;
+    --txt-theme:#000;
+    --button-bg:linear-gradient(0deg,rgb(70 192 201) 0%, #8ad9e6 100%);
+    --secondary-color:#000;
+   
+}

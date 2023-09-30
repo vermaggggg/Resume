@@ -81,7 +81,7 @@ function Profile() {
                     <HiOfficeBuilding size={30} className="p-1 location"/><p className="p-1 m-0 text_color">{profile.position}</p>
                 </Col>
                 <Col>
-                    <p className="px-2">{profile.tagline}</p>
+                    <p className="px-2 text_color">{profile.tagline}</p>
                 </Col>
             </Col>
             <Col md={4} sm={6} className="d-flex flex-wrap align-items-center">
@@ -141,7 +141,7 @@ function Profile() {
                 </button>
             </Modal.Footer>
         </Modal>
-        <Modal show={alert} onHide={handleAlertHide}>
+        <Modal show={alert} onHide={handleAlertHide} className='modal_profile_details'>
             <Modal.Header>
                 <Modal.Title>{profileName}</Modal.Title>
             </Modal.Header>

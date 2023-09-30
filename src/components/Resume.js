@@ -12,7 +12,7 @@ function Resume() {
     <Fragment>
 
       <Container fluid className="p-0 top-image"></Container>
-      <Container>
+      <Container className='profile_container'>
 
         <Profile></Profile>
 
@@ -24,7 +24,7 @@ function Resume() {
 
         <Skills></Skills>
 
-        <div className="d-grid col-2 mx-auto my-4 text-center">
+        <div className="preview_btn">
           <NavLink className="nav-link align-middle bg-dark text-white p-2 rounded button" to="/preview"><span>Preview</span></NavLink>
         </div>
 
