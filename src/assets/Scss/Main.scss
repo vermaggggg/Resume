@@ -138,6 +138,7 @@ body {
     }
 
     .modal-body {
+        color: $txt-theme;
         h4 {
             color: $white;
         }
@@ -411,6 +412,7 @@ body {
 
     .preview_inner {
         .inner_row {
+            height: 100vh;
             width: 900px;
             margin: 0 auto;
             display: flex;
@@ -575,6 +577,14 @@ body {
     p {
         @media ($breckpoint_SM) {
             font-size: 14px;
+        }
+    }
+
+    svg {
+        transition: all 0.4s linear;
+
+        &:hover {
+            transform: scale(1.2);
         }
     }
 }
