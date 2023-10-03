@@ -5,7 +5,6 @@ import { GiGraduateCap } from 'react-icons/gi'
 import { HiLocationMarker, HiOfficeBuilding, HiOutlineMail, HiPhone } from 'react-icons/hi'
 import jsPDF from 'jspdf';
 import html2canvas from "html2canvas";
-import account from '../assets/Images/account.jpeg';
 import { useSelector } from 'react-redux';
 
 function PdfComponent() {
@@ -239,7 +238,7 @@ function PdfComponent() {
     <div className='preview_sec'>
       <div className='coustom_container'>
         <div className='preview_inner'>
-          <div className='inner_row'>
+          <div className='inner_row' id="divToPrint">
 
             <div className='left_sec'>
               <div className='img_sec'>
