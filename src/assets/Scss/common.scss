@@ -1,3 +1,4 @@
+@import './theme.scss';
 $breckpoint_XXL: "max-width: 1400px";
 $breckpoint_XL: "max-width: 1200px";
 $breckpoint_LG: "max-width: 992px";
@@ -5,10 +6,41 @@ $breckpoint_MD: "max-width: 767px";
 $breckpoint_SM: "max-width: 576px";
 $breckpoint_450: "max-width:450px";
 $breckpoint_ESM: "max-width: 385px";
-$background:#282e3e;
-$primary-color:#29abdd;
+$button-bg:var( --button-bg);
+$header-bg:var(--header-bg);
+$txt-theme:var(--txt-theme);
+$bottom-bg:var(--bottom-bg);
+$background:var(--background);
+$primary-color:var(--primary-color);
+$banner-bg:var( --banner-bg);
+$bg-gradient:var(--bg-gradient);
+$secondary-color:var( --secondary-color);
 $white:#fff;
-$bg-gradient:linear-gradient(135deg, #05b2f4 0%, #add0f5de 100%);
+$black:black;
+// $bg-gradient:linear-gradient(135deg, #05b2f4 0%, #add0f5de 100%);
 $border-color:#739dc8;
 $light-bg:#739dc8;
 $data-bg:#739dc866;
+.coustom_container {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 100px;
+  
+    @media ($breckpoint_XL) {
+      padding: 0 40px;
+    }
+  
+    @media ($breckpoint_LG) {
+      padding: 0 30px;
+    }
+  
+    @media ($breckpoint_MD) {
+      padding: 0 18px;
+    }
+  
+    @media ($breckpoint_SM) {
+      padding: 0 15px;
+    }
+  }
+  

@@ -1,6 +1,6 @@
 const profileReducer = (profile={
     name: "Your Name",
-    location: "City, Name",
+    location: "City Name",
     github: "",
     linkedin: "",
     website: "",

@@ -10,20 +10,25 @@ body {
 }
 
 .header_sec {
-    background-color: $background;
+    background: $header-bg;
+    border-bottom: 2px solid $white;
 
     .navbar-brand {
-        width: 100%;
-        display: flex;
-        margin: auto;
-        justify-content: center;
+        // width: 100%;
+        // display: flex;
+        // margin: auto;
+        // justify-content: center;
 
         a {
             color: $white !important;
             font-size: 16px;
 
             img {
-                width: 100px;
+                width: 80px;
+
+                @media ($breckpoint_LG) {
+                    width: 54px;
+                }
             }
         }
     }
@@ -38,26 +43,29 @@ body {
 
 .button {
     position: relative;
-    padding: 8px 20px;
+    padding: 8px 20px !important;
     font-family: inherit;
-    background-color: $background;
-    border: 2px solid;
+    background: $button-bg;
+    border: 1px solid $bottom-bg;
     font-size: 14px;
     font-weight: 600;
-    color: $white;
+    color: $txt-theme !important;
     cursor: pointer;
     text-transform: uppercase;
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    border-radius: 0px !important;
+    border-radius: 24px !important;
+    width: fit-content;
+    z-index: 1;
 }
 
-.button:hover span {
-    background: $bg-gradient;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+// .button:hover span {
+//     color: $txt-theme;
+//     background: $bg-gradient;
+//     background-clip: text;
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+// }
 
 .button::before {
     position: absolute;
@@ -70,12 +78,13 @@ body {
     pointer-events: none;
     margin: auto;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: -1;
 }
 
 .button:hover {
-
+    transform: scale(1.1);
     border-image: $bg-gradient;
-    border-image-slice: 1;
+   
     font-size: 14px;
 }
 
@@ -92,15 +101,16 @@ body {
 }
 
 .bottom_bg {
-    background: $light-bg !important;
+    background: $header-bg !important;
+    margin: 0px !important;
 
     .bottom_sec {
         text-decoration: none;
-
-        color: $background;
+        // border-bottom: 2px dotted $white;
+        color: $txt-theme;
 
         &:hover {
-            color: $background;
+            color: $txt-theme;
         }
     }
 }
@@ -114,16 +124,22 @@ body {
             color: $white;
 
             svg {
-                color: $white;
+                color: $txt-theme;
 
                 &:hover {
                     color: $primary-color;
                 }
             }
         }
+
+        .modal-title {
+            color: $txt-theme;
+        }
     }
 
     .modal-body {
+        color: $txt-theme;
+
         h4 {
             color: $white;
         }
@@ -153,18 +169,22 @@ body {
 }
 
 .text_color {
-    color: $white;
+    color: $txt-theme;
+}
+
+.text_black {
+    color: $black;
 }
 
 .textarea_sec {
     background: $background;
-    color: $white;
+    color: $txt-theme;
 
     &:focus {
         background: $background;
         outline: none !important;
         box-shadow: none !important;
-        color: $white;
+        color: $txt-theme;
     }
 }
 
@@ -208,16 +228,25 @@ body {
 /* ============================== */
 .top-image {
     height: 300px;
-    background-image: url("../Images/banner_res.png");
+    // background-image: url("../Images/banner_res.png");
+    background-image: $banner-bg;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-position: top;
     background-size: cover;
 
-    @media ($breckpoint_SM) {
-        height: 110px;
+    @media ($breckpoint_XXL) {
+        background-position: right;
+        height: 250px;
     }
+
+    @media ($breckpoint_SM) {
+        height: 145px;
+
+    }
+
+
 
 }
 
@@ -238,6 +267,7 @@ body {
     @media ($breckpoint_SM) {
         height: 100px;
         width: 100px;
+        top: -50px;
 
     }
 }
@@ -249,6 +279,10 @@ body {
     color: $primary-color;
     transition: 0.4s;
     border: none;
+
+    @media ($breckpoint_SM) {
+        margin: 5px;
+    }
 }
 
 .edit:hover {
@@ -307,12 +341,32 @@ body {
 .firstname {
     position: relative;
     top: 20px;
+    font-size: 32px;
 }
 
 .title {
     font-weight: 600;
     letter-spacing: 1px;
     font-size: 20px;
+    position: relative;
+    z-index: 1;
+    padding: 5px 10px;
+
+    @media ($breckpoint_LG) {
+        font-size: 18px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: $primary-color;
+        border-radius: 16px;
+    }
 }
 
 .bg-1 {
@@ -338,4 +392,206 @@ body {
     border: 4px solid white;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.preview_btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    .button {
+        margin: 20px 0px;
+    }
+}
+
+//preview section css
+
+
+.preview_sec {
+    background: #c4d3e6;
+    padding: 30px 0px 0px 0px;
+
+    .preview_inner {
+        .inner_row {
+            height: 100vh;
+            width: 900px;
+            margin: 0 auto;
+            display: flex;
+
+            @media ($breckpoint_LG) {
+                height: auto;
+                width: 100%;
+            }
+
+            @media ($breckpoint_SM) {
+
+                display: block;
+            }
+
+            .left_sec {
+                width: 40%;
+                text-align: center;
+                background: $header-bg;
+                padding: 20px;
+                border-radius: 10px 0px 0px 10px;
+
+
+                @media ($breckpoint_SM) {
+                    width: 100%;
+                    border-radius: 10px 10px 0px 0px;
+                }
+
+                .data_sec {
+                    padding-top: 15px;
+                    text-align: center;
+
+                    svg {
+                        color: $secondary-color;
+                    }
+
+                    h3 {
+                        font-size: 22px;
+                        border-bottom: 0.5px solid $white;
+                        padding: 10px 0px;
+                        color: $txt-theme;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        word-break: break-all;
+                    }
+                }
+
+                .img_sec {
+                    padding: 5px;
+                    // background: $white;
+                    border-radius: 50%;
+
+                    img {
+                        border-radius: 50%;
+                        border: 1px solid $white;
+                        padding: 10px;
+                        width: 150px;
+
+                    }
+                }
+            }
+
+            .right_sec {
+                width: 60%;
+                padding: 20px;
+                background: $white;
+                border-radius: 0px 10px 10px 0px;
+
+                @media ($breckpoint_SM) {
+                    width: 100%;
+                    border-radius: 0px 0px 10px 10px;
+                }
+
+                .name_sec {
+                    text-align: center;
+
+                    h1 {
+                        font-size: 35px;
+                        font-weight: 800;
+
+                        @media ($breckpoint_LG) {
+                            font-size: 28px;
+                        }
+                    }
+
+                }
+
+                .skills {
+
+
+                    .skill_inner {
+
+                        margin-left: 5px;
+
+                        p {
+                            margin-bottom: 5px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    h1 {
+                        margin-bottom: 0px;
+                    }
+
+                    hr {
+                        margin: 10px 0px;
+                    }
+                }
+
+                .about_me {
+                    .about_inner {
+                        margin-left: 5px;
+
+                        p {
+                            margin-bottom: 5px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .experience {
+                    .exp_inner {
+                        p {
+                            font-size: 14px;
+                        }
+
+                        h4 {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                .education {
+                    .edu_inner  {
+                        p {
+                            font-size: 14px;
+                        }
+
+                      
+                    }
+                    h4 {
+                        font-size: 20px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.position_style {
+    text-align: left;
+}
+
+.profile_container {
+    @media ($breckpoint_SM) {
+        padding: 0px 30px !important;
+    }
+
+    @media ($breckpoint_ESM) {
+        max-width: 325px !important;
+    }
+
+    p {
+        @media ($breckpoint_SM) {
+            font-size: 14px;
+        }
+    }
+
+    svg {
+        transition: all 0.4s linear;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.about_sec {
+    background: $bg-gradient;
 }

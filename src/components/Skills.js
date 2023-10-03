@@ -75,7 +75,7 @@ function Skills() {
 
   return (
     <Row className="justify-content-center mt-2 ">
-      <Col md={8} sm={12} className="d-flex justify-content-between align-items-center bg-light rounded ">
+      <Col md={8} sm={12} className="d-flex justify-content-between align-items-center bg-light rounded about_sec">
         <h5 className="m-0 heading">Skills</h5>
         {!isEdit && <MdAddCircleOutline size={30} className="rounded edit" onClick={handleShow} />}
         {isEdit && <MdEdit size={30} className="rounded edit" onClick={handleShow} />}
